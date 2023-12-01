@@ -2,7 +2,7 @@ let randomNumber
 
 async function getMovie() {
     randomNumber = Math.floor((Math.random() * 900) + 1)
-    axios.get(`https://api.themoviedb.org/3/movie/${randomNumber}?api_key=a2d6ffe1f90a388b7ec15db194276dda`)
+    axios.get(`https://api.themoviedb.org/3/movie/${randomNumber}?api_key=a2d6ffe1f90a388b7ec15db194276dda&language=pt-BR`)
     .then(response => {
         let posterImg = response.data.poster_path
         let poster = `https://image.tmdb.org/t/p/w500/${posterImg}`
